@@ -71,6 +71,12 @@
   background-color: darkgrey;
 }
 
+.zone{
+  width: 30vw;
+  height: 90vh;
+  background-color: beige;
+}
+
 .triangle {
   width: 0;
   height: 0;

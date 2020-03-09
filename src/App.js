@@ -1,53 +1,70 @@
 import React from 'react';
 import './App.css';
 
-// Objet draggable
-import Pacman from './img/pacman-151558_1280.png'
-import Bouclier from './img/bouclier.png'
-import Crane from './img/crane.png'
-
-function App() {
-  return (
-    <body>
-      <h1>Title</h1>
-      <section className="game-app">
-        <section className="col-item wrap">
-
-          <div className="rotor"></div>
-          <div className="mat INDIANRED"></div>
-          <div className="triangle"></div>
-          <div className="socle maroon"></div>
-
-          <div className="rotor"></div>
-          <div className="triangle"></div>
-          <div className="socle maroon"></div>
-          <div className="mat INDIANRED"></div>
 
 
+
+class App extends React.Component{
+  render(){
+    function allowDrop(ev) {
+      ev.preventDefault();
+      }
+    
+      function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+      }
+    
+      function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    return (
+      <body>
+        <h1>Title</h1>
+
+        <section className="game-app">
+
+          <section className="col-item wrap">
+            <div className="rotor"></div>
+            <div id="drag1" className="mat SALMON   draggable"      draggable="true" onDragStart="drag(event)"></div>
+            <div id="drag2" className="triangle     draggable"      draggable="true" onDragStart="drag(event)"></div>
+            <div id="drag3" className="socle maroon draggable"      draggable="true" onDragStart="drag(event)"></div>
+
+            <div className="rotor"></div>
+            <div id="drag5" className="triangle       draggable"     draggable="true" onDragStart="drag(event)"></div>
+            <div id="drag6" className="socle pink     draggable"     draggable="true" onDragStart="drag(event)"></div>
+            <div id="drag7" className="mat INDIANRED  draggable"     draggable="true" onDragStart="drag(event)"></div>
+
+            {/* // Example
+            <div id="drag2" class="draggable" draggable="true" ondragstart="drag(event)"></div>
+                      
+            <div class="dropper margin" ondrop="drop(event)" ondragover="allowDrop(event)"></div> */}
+          </section>
+
+          <section className="dropper zone" onDrop="drop(event)" onDragOver="allowDrop(event)">
+
+          </section>
+
+          <section className="col-item wrap">
+            <div className="rotor"></div>
+            <div className="mat SALMON draggable"     draggable="true"></div>
+            <div className="socle maroon draggable"   draggable="true"></div>
+            <div className="triangle draggable"       draggable="true"></div>
+
+            <div className="rotor"></div>
+            <div className="triangle draggable"       draggable="true"></div>
+            <div className="mat INDIANRED draggable"  draggable="true"></div>
+            <div className="socle pink draggable"     draggable="true"></div>
+          </section>
         </section>
 
-
-        <section className="col-item wrap">
-
-          <div className="rotor"></div>
-          <div className="mat INDIANRED"></div>
-          <div className="socle maroon"></div>
-          <div className="triangle"></div>
-
-          <div className="rotor"></div>
-          <div className="triangle"></div>
-          <div className="mat INDIANRED"></div>
-          <div className="socle maroon"></div>
-        </section>
-      </section>
-
-
-    </body>
-  );
+      </body>
+    );
+  }
 }
 
 export default App;
-
 
 {/* <div className="paysage h150px w150px" style={{backgroundImage: `url(${Pacman})`}}></div>
         <div className="paysage h150px w150px" style={{backgroundImage: `url(${Bouclier})`}}></div>
