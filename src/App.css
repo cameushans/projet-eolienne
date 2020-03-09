@@ -43,13 +43,10 @@
   background-color:pink;
 }
 
+.element {
+  position: absolute;
+}
 
-.h150px{
-  height: 150px;
-}
-.w150px{
-  width:150px;
-}
 .wrap{
   flex-wrap: wrap;
 }
@@ -58,7 +55,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #282c34;
+  align-items: center;
+  background-color: #282c34; height: 90vh;
 }
 
 .col-item{
@@ -68,13 +66,6 @@
   align-items: center;
   width: 20vw;
   height: 90vh;
-  background-color: darkgrey;
-}
-
-.zone{
-  width: 30vw;
-  height: 90vh;
-  background-color: beige;
 }
 
 .triangle {
