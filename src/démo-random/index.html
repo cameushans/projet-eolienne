@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <style type="text/css">
+                        body {
+                                background-color: #282c34;
+                                height: 100vh;
+                                margin: 0;
+                                padding: 0;
+                                width: 100vw;
+                        }
+
+                        .box {
+                                height: 50px;
+                                position: absolute;
+                                width: 50px;
+                        }
+
+                        .INDIANRED{background-color: #CD5C5C;}
+                        .SALMON{background-color: #FA8072;}
+                        .LIGHTCORAL{background-color: #F08080;}
+                        .maroon{background-color: maroon;}
+                        .pink{background-color:pink;}
+                        .element {position: absolute;}
+                        .wrap{flex-wrap: wrap;}
+
+                        .game-app{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                background-color: #282c34; min-height: 100vh;
+                                width: 100vw;
+                        }
+
+                        .col-item{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                width: 20vw;
+                                height: 90vh;
+                        }
+
+                        .col-elem{
+                                display: flex;
+                                flex-direction: column;
+                                width: 20vw;
+                                height: 90vh;
+                        }
+
+                        .triangle {
+                                width: 0;
+                                height: 0;
+                                border-left: 72px solid transparent;
+                                border-right: 72px solid transparent;
+                                border-bottom: 120px solid purple;
+                                position: absolute;
+                        }
+
+                        .mat{
+                                width: 20px;
+                                height: 300px;
+                                position: absolute;
+                        }
+
+                        .socle {
+                                width: 70px;
+                                height: 50px;
+                                position: absolute;
+                        }
+
+                        h1{
+                                display: flex;
+                                height: 10vh;
+                                width: 100vw;
+                                justify-content: center;
+                                align-items: center;
+                        }
+
+                </style>
+                <script type="text/javascript">
+                        function setDivPos() {
+                                for (i = 1; i <= 12; i++) {
+                                        var x = Math.floor(Math.random() * 1200);
+                                        var y = Math.floor(Math.random() * 325);
+                                        document.getElementById("div" + i).style.left = x + "px";
+                                        document.getElementById("div" + i).style.top = y + "px";
+                                }
+                        }
+                </script>
+        </head>
+        <body onload="setDivPos();">
+                
+                <div id="div1" class="mat INDIANRED"></div>
+                <div id="div2" class="triangle"></div>
+                <div id="div3" class="socle maroon"></div>
+           
+                <div id="div4" class="mat INDIANRED"></div>
+                <div id="div5" class="triangle"></div>
+                <div id="div6" class="socle maroon"></div>
+                
+                <div id="div7" class="mat INDIANRED"></div>
+                <div id="div8" class="triangle"></div>
+                <div id="div9" class="socle maroon"></div>
+                              
+                <div id="div10" class="mat INDIANRED"></div>
+                <div id="div11" class="triangle"></div>
+                <div id="div12" class="socle maroon"></div>
+        
+                             
+        </body>
+</html>
