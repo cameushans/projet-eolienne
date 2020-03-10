@@ -8,30 +8,26 @@ import Card from './components/Card';
 
 function App(){
   return (
-    <div className="App">
+    <Board id="board-1" className="board">
       <main className="flexbox">
         <Board id="board-1" className="board">
-
           <Card id="card-1" className="triangle card"  style={{color: '#CD5C5C'}} draggable="true" />
           <Card id='card-2' className="triangle card"  style={{color: '#CD5C5C'}} draggable='true' />
-          <Card id="card-10" className="socle card"  style={{backgroundColor: '#CD5C5C'}} draggable="true" />
-
-
-          {/* <Card id="card-2" className="card" draggable="true">
-            <p>Hello 2</p>
-          </Card> */}
-
+          <Card id="card-10" className="socle card"    style={{backgroundColor: '#CD5C5C'}} draggable="true" />
         </Board>
 
-        <Board id="board-2" className="board">
 
+
+        <Board id="board-9" className="board-central"></Board>
+
+
+
+        <Board id="board-3" className="board">
           <Card id="card-7" className="mat card"       style={{backgroundColor: '#CD5C5C'}} draggable="true" />
           <Card id='card-8' className="triangle card"  style={{color: '#CD5C5C'}} draggable='true' />
-
-
         </Board>
       </main>
-    </div>
+    </Board>
   );
 }
 export default App;
