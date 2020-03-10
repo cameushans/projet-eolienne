@@ -80,11 +80,17 @@
                 </style>
                 <script type="text/javascript">
                         function setDivPos() {
-                                for (i = 1; i <= 12; i++) {
-                                        var x = Math.floor(Math.random() * 1200);
+                                for (i = 1; i <= 6; i++) {
+                                        var x = Math.floor(Math.random() * 450);
                                         var y = Math.floor(Math.random() * 325);
                                         document.getElementById("div" + i).style.left = x + "px";
                                         document.getElementById("div" + i).style.top = y + "px";
+                                }
+                                for (j=7; j <=12; j++) {
+                                        var a = Math.floor(Math.random() * (1200 - 850 + 1) + 850);
+                                        var b = Math.floor(Math.random() * 325);
+                                        document.getElementById("div" + j).style.left = a + "px";
+                                        document.getElementById("div" + j).style.top = b + "px";
                                 }
                         }
                 </script>
