@@ -2,10 +2,10 @@ import React from 'react'
 
 function Card(props) {
     const dragStart = e => {
-        const target = e.target
-        console.log(e)
-        console.log(e.target.id)
-        e.dataTransfer.setData('card-id', target.id);
+        // console.log(e)
+        // console.log(e.target.id)
+        e.dataTransfer.setData('text', e.target.id);
+        
 
 
         // setTimeout(() => {
@@ -35,17 +35,6 @@ function Card(props) {
         >
             { props.children }
         </div>
-
-        // <div
-        // id={props.id}
-        // className={props.className}
-        // draggable={props.draggable}
-        // onDragStart={dragStart}
-        // onDragOver={dragOver}
-        // onDragLeave={dragLeave}
-        // >
-        //     { props.children }
-        // </div>
     )
 }
 

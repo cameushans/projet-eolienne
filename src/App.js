@@ -1,101 +1,73 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+
+// Components 
 import Board from './components/Board';
 import Card from './components/Card';
 
+// import Triangle from './components/Triangle';
+// import Combinaison from './components/Combinaison';
+// import Isset from './components/Isset';
 
 
+class App extends Component {
+  render(){
+    var elem = document.querySelectorAll(".card");
 
-function App(){
-  return (
-    <Board id="board-1" className="board">
-      <main className="flexbox">
-        <Board id="board-1" className="board">
-          <Card id="card-1" className="triangle card"  style={{color: '#CD5C5C'}} draggable="true" />
-          <Card id='card-2' className="triangle card"  style={{color: '#CD5C5C'}} draggable='true' />
-          <Card id="card-10" className="socle card"    style={{backgroundColor: '#CD5C5C'}} draggable="true" />
-        </Board>
+    // if (elem < 19) {
+    //   return(
+    //     <span className="ok">Have a beer !</span>
+    //   )
+    // }
+    // else{
+    //   return(
+    //     <span className="not-ok">Sorry, you are not old enough.</span>
+    //   )
+    // }
 
+    // {let elem2 = ReactDOM.findDOMNode(<Board id="board-9" className="board-central" />).getElementsByClassName('card').length}
+  
+    return (
+      <div>
+        <main className="flexbox">
 
+          <Board  id="board-1" className="board">
+            <Card id="card-13" className="mat card"       style={{backgroundColor: 'pink'}}         draggable="true"  />
+            <Card id="rotor"   className="rotor card"     style={{backgroundColor: 'yellowgreen'}}  draggable="true"  />
+            <Card id="card-10" className="socle card"     style={{backgroundColor: 'pink'}}         draggable="true"  />
+            <Card id="card-21" className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  />
 
-        <Board id="board-9" className="board-central"></Board>
+            {/* <Card id="card-20" className="rotor card"     style={{backgroundColor: 'teal'}}         draggable="true"  types='rotor' /> */}
+          </Board>
+  
+  
+          
+            
+          <div id="board-9" className="central_column">
+              <Board id="pale-top-1"      className="board-pale-top" ></Board>
+              
+              <div className="row pale-zone">
+                <Board id="pale-right-1"  className="board-pale-right" ></Board>
+                <Board id="pale-left-1"   className="board-pale-left" ></Board>
+              </div>
 
-
-
-        <Board id="board-3" className="board">
-          <Card id="card-7" className="mat card"       style={{backgroundColor: '#CD5C5C'}} draggable="true" />
-          <Card id='card-8' className="triangle card"  style={{color: '#CD5C5C'}} draggable='true' />
-        </Board>
-      </main>
-    </Board>
-  );
+              <Board id="board-90"        className="board-rotor" dataBrand="rotor"></Board>
+              <Board id="board-5"         className="board-mat"></Board>
+          </div>
+  
+  
+  
+          <Board id="board-3" className="board">
+            <Card id="card-15" className="mat card"      style={{backgroundColor: '#FA8072'}}      draggable="true" />
+            <Card id="card-24" className="pale card"     style={{backgroundColor: 'blue'}}         draggable="true" />
+            <Card id="card-14" className="mat card"      style={{backgroundColor: 'lightyellow'}}  draggable="true" />
+            <Card id="card-28" className="pale card"     style={{backgroundColor: 'orange'}}       draggable="true" />
+            <Card id="card-27" className="pale card"     style={{backgroundColor: 'violet'}}       draggable="true" />
+          </Board>
+          
+        </main>
+      </div>
+    );
+  }
 }
 export default App;
-
-
-
-// class App extends React.Component{
-//   render(){
-//     function allowDrop(ev) {
-//       ev.preventDefault();
-//       }
-    
-//       function drag(ev) {
-//       ev.dataTransfer.setData("text", ev.target.id);
-//       }
-    
-//       function drop(ev) {
-//       ev.preventDefault();
-//       var data = ev.dataTransfer.getData("text");
-//       ev.target.appendChild(document.getElementById(data));
-//     }
-//     return (
-//       <body>
-//         <h1>Title</h1>
-
-//         <section className="game-app">
-
-//           <section className="col-item wrap">
-//             <div className="rotor"></div>
-//             <div id="drag1" className="mat SALMON   draggable"      draggable="true" onDragStart="drag(event)"></div>
-//             <div id="drag2" className="triangle     draggable"      draggable="true" onDragStart="drag(event)"></div>
-//             <div id="drag3" className="socle maroon draggable"      draggable="true" onDragStart="drag(event)"></div>
-
-//             <div className="rotor"></div>
-//             <div id="drag5" className="triangle       draggable"     draggable="true" onDragStart="drag(event)"></div>
-//             <div id="drag6" className="socle pink     draggable"     draggable="true" onDragStart="drag(event)"></div>
-//             <div id="drag7" className="mat INDIANRED  draggable"     draggable="true" onDragStart="drag(event)"></div>
-
-//             {/* // Example
-//             <div id="drag2" class="draggable" draggable="true" ondragstart="drag(event)"></div>
-                      
-//             <div class="dropper margin" ondrop="drop(event)" ondragover="allowDrop(event)"></div> */}
-//           </section>
-
-//           <section className="dropper zone" onDrop="drop(event)" onDragOver="allowDrop(event)">
-
-//           </section>
-
-//           <section className="col-item wrap">
-//             <div className="rotor"></div>
-//             <div className="mat SALMON draggable"     draggable="true"></div>
-//             <div className="socle maroon draggable"   draggable="true"></div>
-//             <div className="triangle draggable"       draggable="true"></div>
-
-//             <div className="rotor"></div>
-//             <div className="triangle draggable"       draggable="true"></div>
-//             <div className="mat INDIANRED draggable"  draggable="true"></div>
-//             <div className="socle pink draggable"     draggable="true"></div>
-//           </section>
-//         </section>
-
-//       </body>
-//     );
-//   }
-// }
-
-// export default App;
-
-{/* <div className="paysage h150px w150px" style={{backgroundImage: `url(${Pacman})`}}></div>
-        <div className="paysage h150px w150px" style={{backgroundImage: `url(${Bouclier})`}}></div>
-        <div className="paysage h150px w150px" style={{backgroundImage: `url(${Crane})`}}></div> */}
