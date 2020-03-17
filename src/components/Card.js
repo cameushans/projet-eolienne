@@ -6,8 +6,7 @@ function Card(props) {
         // console.log(e.target.id)
         e.dataTransfer.setData('text', e.target.id);
         
-
-
+        
         // setTimeout(() => {
         //     target.style.display = "none";
         // }, 0);

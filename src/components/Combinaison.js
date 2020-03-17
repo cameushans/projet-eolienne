@@ -29,10 +29,6 @@ class Combinaison extends Component {
         return(
             <span className="not-ok">stop</span>
         )}
-
-        // if (triangle_zone.children.length > 0) { 
-        //     ans = "Element <div> has children"; 
-        // }
     }
 }
 

@@ -5,8 +5,6 @@ function Triangle (props) {
         e.preventDefault();
         const id = e.dataTransfer.getData('triangle-id');
         
-
-
         const card = document.getElementsByClassName(id);
 
         e.target.appendChild(card);
@@ -15,7 +13,6 @@ function Triangle (props) {
     const dragOver = e => {
         e.preventDefault();
     }
-
 
     return (
         <div
