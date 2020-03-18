@@ -23,7 +23,7 @@ class App extends Component {
           <div className="central_column">
               <Board id="pale-top-zone"       className="board-pale-top"   dataBrand="pale-top" ></Board>
               
-              <div className="row pale-zone">
+              <div id="pale-zone" className="row pale-zone">
                 <Board id="pale-left-zone"    className="board-pale-right" dataBrand="pale-left" ></Board>
                 <Board id="pale-right-zone"   className="board-pale-left"  dataBrand="pale-right" ></Board>
               </div>

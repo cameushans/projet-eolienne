@@ -8,23 +8,16 @@ function Board (props) {
         const isCorrectMatching = draggableElementData===droppableElementData;
         
         if(isCorrectMatching) {
+            console.log('bonne items')
             // const draggableElement = document.getElementById(draggableElementData);
             // e.target.classList.add("dropped");
             // e.target.style.backgroundColor = draggableElement.style.color = "green"; // This approach works only for inline styles. A more general approach would be the following: 
-
-            e.target.style.border = "solid"
-
-
             // // e.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
             // draggableElement.classList.add("dragged");
             // draggableElement.setAttribute("draggable", "false");
             // e.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
-            e.target.insertAdjacentHTML("afterbegin", `<div class="matching">👌</div>`);
-
-
-            
-            console.log('bonne items')
-        }
+            e.target.style.border = "solid"
+            e.target.insertAdjacentHTML("afterbegin", `<div class="matching">👌</div>`);        }
         else{
             console.log('pas le bonne items')
             const draggableElement = document.getElementById(draggableElementData);
