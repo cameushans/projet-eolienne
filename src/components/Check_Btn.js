@@ -9,6 +9,9 @@ class Check_Btn extends React.Component {
         const mat_zone = document.getElementById("mat-zone");
         const rotor_zone = document.getElementById("rotor-zone");
 
+        let fruits = pale_top_zone + pale_left_zone + pale_right_zone + mat_zone + rotor_zone;
+        console.log(fruits)
+
         const elem = 
         rotor_zone.children.length == 2 && 
         mat_zone.children.length == 2 &&
@@ -18,6 +21,9 @@ class Check_Btn extends React.Component {
         
         if (elem) {
             alert('tout est bon')
+            pale_top_zone.classList.add("turn_up", "deplacement_top")
+            pale_left_zone.classList.add("turn_up", "deplacement_left")
+            pale_right_zone.classList.add("turn_up", "deplacement_right")
         }
         else{
         return(

@@ -1,14 +1,43 @@
 *{margin: 0; padding: 0%; box-sizing: border-box;}
-
 body{
   background-color: #F3F3F3;  
 }
-
-.row{
+h1{
   display: flex;
-  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  background-color: #5e81ac;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  text-align: center;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0 40px;
+  height: 60px;
+  border: none;
+  width: 200px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 22px;
+  right: 54px;
+}
+.h150px{
+  height: 150px;
+}
+.w150px{
+  width:150px;
 }
 
+
+/* Flex */
 .flexbox{
   display: flex;  
   justify-content: space-between;
@@ -19,7 +48,109 @@ body{
   overflow: hidden;
   padding: 15px;
 }
+.col-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+  height: 90vh;
+  background-color: darkgrey;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.wrap{
+  flex-wrap: wrap;
+}
 
+
+
+/* élements draggable */
+.flexbox .board .card{
+  cursor: pointer;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.rotor{
+  width: 70px;
+  height: 123px; 
+}
+.pale{
+  width: 33px;
+  height: 94px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mat{
+  width: 20px;
+  height: 300px;
+}
+
+
+
+/* zone de drope */
+.board-mat{
+  width: 28px;
+  height: 308px;
+  border: dashed grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-rotor{
+  width: 78px;
+  height: 130px;
+  border: dashed grey;
+
+  position: relative;
+  top: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-pale-top{
+  width: 39px;
+  height: 100px;
+  border: dashed grey;
+
+  position: relative;
+  top: 135px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-pale-left{
+  width: 39px;
+  height: 100px;
+  border: dashed grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-pale-right{
+  width: 39px;
+  height: 100px;
+  border: dashed grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pale-zone{
+  width: 230px;
+  justify-content: space-between;
+  margin-bottom: -226px;
+}
 .flexbox .board{
   display: flex;
   flex-direction: column;
@@ -42,128 +173,61 @@ body{
   max-width: 900px;
   padding: 15px;
 }
-.flexbox .board .card{
-  cursor: pointer;
-  margin-bottom: 25px;
-  justify-content: center;
-  align-items: center;
-}
-
-.saumon{
-  background-color: #FA8072;
-}
 
 
-.h150px{
-  height: 150px;
-}
-.w150px{
-  width:150px;
-}
-.wrap{
-  flex-wrap: wrap;
+
+/* Key frames */
+
+/* Animation pour déplacer les éléments */
+.deplacement_top{
+  animation-name: deplacement_top;
+  animation-duration: 4s;
+  top: 155px
 }
 
-.col-item{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 20vw;
-  height: 90vh;
-  background-color: darkgrey;
+@keyframes deplacement_top {
+  from {
+    top: 135px
+  }
+  to {
+    top: 155px
+  }
 }
 
-.rotor{
-  width: 70px;
-  height: 123px;
-  
-}
-.board-rotor{
-  width: 78px;
-  height: 130px;
-  border: dashed grey;
-
+.deplacement_left{
+  animation-name: deplacement_left;
+  animation-duration: 4s;
   position: relative;
-  top: 70px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 50px
 }
 
-.pale-zone{
-  width: 230px;
-  justify-content: space-between;
-  margin-bottom: -226px;
+@keyframes deplacement_left {
+  from {
+    left: 20px
+  }
+  to {
+    left: 50px
+  }
 }
 
-.pale{
-  width: 33px;
-  height: 94px;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.board-pale-top{
-  width: 39px;
-  height: 100px;
-  border: dashed grey;
-
+.deplacement_right{
+  animation-name: deplacement_right;
+  animation-duration: 4s;
   position: relative;
-  top: 135px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: 50px;
 }
 
-.board-pale-right{
-  width: 39px;
-  height: 100px;
-  border: dashed grey;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@keyframes deplacement_right {
+  from {
+    right: 20px
+  }
+  to {
+    right: 50px
+  }
 }
 
-.board-pale-left{
-  width: 39px;
-  height: 100px;
-  border: dashed grey;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mat{
-  width: 20px;
-  height: 300px;
-}
-.board-mat{
-  width: 32px;
-  height: 314px;
-  border: dashed grey;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1{
-  display: flex;
-  height: 10vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-}
+/* Animation pour check */
 .matching{
-  width: 400px;
-  height: 200px;
   background-color: transparent;
   position: absolute;
   top: 13vh;
@@ -183,33 +247,31 @@ h1{
     opacity: 0;
   }
 }
-button{
-  background-color: #5e81ac;
-  color: white;
-  font-size: 26px;
-  font-weight: 700;
-  font-family: 'Open Sans';
-  text-align: center;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  padding: 0 40px;
-  height: 60px;
-  border: none;
-  width: 200px;
-  cursor: pointer;
 
-  position: absolute;
-  top: 22px;
-  right: 54px;
-}
+/* Animation pour mettre en matche l'éolienne */
+.turn_up{
+    animation: flip-diagonal-2-br 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+  }
 
-/* 
-.dragged {
-  user-select: none;
-  opacity: 0.1;
-  cursor: default;
-}
-.draggable.dragged:hover {
-  opacity: 0.1;
-} */
+ @-webkit-keyframes flip-diagonal-2-br {
+    0% {
+      -webkit-transform: rotate3d(0, 1, 0, 0deg);
+              transform: rotate3d(0, 1, 0, 0deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 1, 0, 360deg);
+              transform: rotate3d(0, 1, 0, 360deg);
+    }
+  }
+
+  @keyframes flip-diagonal-2-br {
+    0% {
+      -webkit-transform: rotate3d(0, 1, 0, 0deg);
+              transform: rotate3d(0, 1, 0, 0deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 1, 0, 360deg);
+              transform: rotate3d(0, 1, 0, 360deg);
+    }
+  }
+  

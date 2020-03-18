@@ -5,7 +5,7 @@ import './App.css';
 import Board from './components/Board';
 import Card from './components/Card';
 import Check_Btn from './components/Check_Btn';
-
+  
 
 class App extends Component {
   render(){
@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <main className="flexbox">
           <Check_Btn />
-          
+
           <Board  id="board-1"            className="board">
             <Card id="rotor"              className="rotor card"     style={{backgroundColor: 'burlywood'}}    draggable="true"  />
             <Card id="pale-right"         className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  >R</Card>
