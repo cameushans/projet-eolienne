@@ -11,12 +11,12 @@ class App extends Component {
   render(){
     return (
       <div>
+        <Check_Btn />
         <main className="flexbox">
-          <Check_Btn />
-
           <Board  id="board-1"            className="board">
-            <Card id="rotor"              className="rotor card"     style={{backgroundColor: 'burlywood'}}    draggable="true"  />
-            <Card id="pale-right"         className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  >R</Card>
+            <Card id="rotor"              className="rotor card"    style={{backgroundColor: ' blueviolet'}}  draggable="true">rotor</Card>
+            <Card id="pale-left"          className="pale card"     style={{backgroundColor: 'blue'}}         draggable="true" >L</Card>
+            <Card id="pale-top"           className="pale card"     style={{backgroundColor: 'orange'}}       draggable="true" >Top</Card>
           </Board>  
           
             
@@ -35,8 +35,7 @@ class App extends Component {
   
           <Board id="board-3"             className="board">
             <Card id="mat"                className="mat card"      style={{backgroundColor: '#FA8072'}}      draggable="true" />
-            <Card id="pale-left"          className="pale card"     style={{backgroundColor: 'blue'}}         draggable="true" >L</Card>
-            <Card id="pale-top"           className="pale card"     style={{backgroundColor: 'orange'}}       draggable="true" >Top</Card>
+            <Card id="pale-right"         className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  >R</Card>
           </Board>          
         </main>
       </div>

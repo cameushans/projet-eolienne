@@ -12,17 +12,18 @@ class Check_Btn extends React.Component {
 
 
         const elem = 
-        rotor_zone.children.length < 4 && 
-        mat_zone.children.length < 4 &&
-        pale_top_zone.children.length < 4 && 
-        pale_left_zone.children.length < 4 && 
-        pale_right_zone.children.length < 4;
+        rotor_zone.children.length == 1 && 
+        mat_zone.children.length == 1 &&
+        pale_top_zone.children.length == 1 && 
+        pale_left_zone.children.length == 1 && 
+        pale_right_zone.children.length == 1;
         
         if (elem) {
             console.log('tout est bon')
             rotor_zone.classList.add("turn_up")
             pale_zone.classList.add("turn_up",)
             pale_top_zone.classList.add("turn_up", "deplacement_top")
+            mat_zone.classList.add("deplacement_mat")
             // pale_left_zone.classList.add("turn_up", "deplacement_left")
             // pale_right_zone.classList.add("turn_up", "deplacement_right")
         }
@@ -31,18 +32,6 @@ class Check_Btn extends React.Component {
             alert('pas encore bon')
         )}
     }
-
-    // const board = document.getElementById("board-1");
-    // const elem =  board.children.length == 2;
-    
-    // if (elem) {
-    //     alert('tout est bon')
-    // }
-    // else{
-    // return(
-    //     alert('pas encore bon')
-    // )}
-
     render() {
         return (
           <button 

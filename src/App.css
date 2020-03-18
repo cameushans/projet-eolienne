@@ -77,6 +77,11 @@ button{
 .rotor{
   width: 70px;
   height: 123px; 
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pale{
   width: 33px;
@@ -226,8 +231,24 @@ button{
   }
 }
 
+.deplacement_mat{
+  animation-name: deplacement_mat;
+  animation-duration: 0.5s;
+  position: relative;
+  bottom: 12px;
+}
+
+@keyframes deplacement_mat {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 12px;
+  }
+}
+
 /* Animation pour check */
-.matching{
+/* .matching{
   background-color: transparent;
   position: absolute;
   top: 13vh;
@@ -237,16 +258,58 @@ button{
   animation-duration: 3s;
   animation-name: jugement;
   opacity: 0;
+} */
+.matching_true{
+  animation-duration: 1.5s;
+  animation-name: color_true;
+}
+@keyframes color_true {
+  from {
+    background-color: #92DA0C;
+  }
+  25%{
+    background-color: white;
+  }
+  50%{
+    background-color: #92DA0C;
+  }
+  75%{
+    background-color: white;
+  }
+  to {
+    background-color: #92DA0C;
+  }
 }
 
-@keyframes jugement {
+.matching_false{
+  animation-duration: 1.5s;
+  animation-name: color_false;
+}
+@keyframes color_false {
+  from {
+    background-color: red;
+  }
+  25%{
+    background-color: white;
+  }
+  50%{
+    background-color: red;
+  }
+  75%{
+    background-color: white;
+  }
+  to {
+    background-color: red;
+  }
+}
+/* @keyframes jugement {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
   }
-}
+} */
 
 /* Animation pour mettre en matche l'éolienne */
 .turn_up{
