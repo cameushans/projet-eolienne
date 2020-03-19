@@ -4,14 +4,14 @@ import './App.css';
 // Components 
 import Board from './components/Board';
 import Card from './components/Card';
-import Check_Btn from './components/Check_Btn';
+import Button from './components/Button';
   
 
 class App extends Component {
   render(){
     return (
       <div>
-        <Check_Btn />
+        <Button />
         <main className="flexbox">
           <Board  id="board-1"            className="board">
             <Card id="rotor"              className="rotor card"    style={{backgroundColor: ' blueviolet'}}  draggable="true">rotor</Card>

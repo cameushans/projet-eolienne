@@ -9,25 +9,12 @@ h1{
   justify-content: center;
   align-items: center;
 }
-button{
-  background-color: #5e81ac;
-  color: white;
-  font-size: 26px;
-  font-weight: 700;
-  font-family: 'Open Sans';
-  text-align: center;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  padding: 0 40px;
-  height: 60px;
-  border: none;
-  width: 200px;
-  cursor: pointer;
-
+#buttons_right{
   position: absolute;
   top: 22px;
   right: 54px;
+  cursor: pointer;
+
 }
 .h150px{
   height: 150px;
@@ -96,8 +83,6 @@ button{
   width: 20px;
   height: 300px;
 }
-
-
 
 /* zone de drope */
 .board-mat{
@@ -205,7 +190,6 @@ button{
   position: relative;
   left: 50px
 }
-
 @keyframes deplacement_left {
   from {
     left: 20px
@@ -214,7 +198,6 @@ button{
     left: 50px
   }
 }
-
 .deplacement_right{
   animation-name: deplacement_right;
   animation-duration: 4s;
@@ -246,19 +229,6 @@ button{
     bottom: 12px;
   }
 }
-
-/* Animation pour check */
-/* .matching{
-  background-color: transparent;
-  position: absolute;
-  top: 13vh;
-  right: 2vw;
-  font-size: -webkit-xxx-large;
-
-  animation-duration: 3s;
-  animation-name: jugement;
-  opacity: 0;
-} */
 .matching_true{
   animation-duration: 1.5s;
   animation-name: color_true;
@@ -280,7 +250,6 @@ button{
     background-color: #92DA0C;
   }
 }
-
 .matching_false{
   animation-duration: 1.5s;
   animation-name: color_false;
@@ -302,19 +271,11 @@ button{
     background-color: red;
   }
 }
-/* @keyframes jugement {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-} */
 
 /* Animation pour mettre en matche l'éolienne */
 .turn_up{
-    animation: flip-diagonal-2-br 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
-  }
+    animation: flip-diagonal-2-br 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite alternate both;
+}
 
  @-webkit-keyframes flip-diagonal-2-br {
     0% {
