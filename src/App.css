@@ -2,6 +2,15 @@
 body{
   background-color: #F3F3F3;  
 }
+.final-test{
+  background-image: url("./img/maison-jardin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.hidden{
+  visibility: hidden;
+}
 h1{
   display: flex;
   height: 10vh;
@@ -85,15 +94,6 @@ h1{
 }
 
 /* zone de drope */
-.board-mat{
-  width: 28px;
-  height: 308px;
-  border: dashed grey;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .board-rotor{
   width: 78px;
   height: 130px;
@@ -140,6 +140,18 @@ h1{
   width: 230px;
   justify-content: space-between;
   margin-bottom: -226px;
+}
+.board-mat{
+  width: 28px;
+  height: 308px;
+  border: dashed grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  bottom: 0px;
 }
 .flexbox .board{
   display: flex;
