@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+
+// import css
+import './css/App.css';
+import './css/Animation.css';
+import './css/ZoneDrop.css';
+import './css/DraggableElements.css';
 
 // Components 
 import Board from './components/Board';

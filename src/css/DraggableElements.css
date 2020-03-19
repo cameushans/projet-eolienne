@@ -1,0 +1,29 @@
+/* élements draggable */
+.flexbox .board .card{
+    cursor: pointer;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+}
+  .rotor{
+    width: 70px;
+    height: 123px; 
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .pale{
+    width: 33px;
+    height: 94px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .mat{
+    width: 20px;
+    height: 300px;
+}

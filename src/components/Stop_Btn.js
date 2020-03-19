@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 function Stop_Btn () {
-    // document.body.style.backgroundColor = "black"
-
     const pale_top_zone = document.getElementById("pale-top-zone");
     const rotor_zone = document.getElementById("rotor-zone");
     const pale_zone = document.getElementById("pale-zone")
@@ -10,10 +8,14 @@ function Stop_Btn () {
 
     const board1 = document.getElementById("board-1")
     const board2 = document.getElementById("board-3")
-    
+
+    const achat = document.getElementById("achat");
+
     if (true) {
         console.log("stopage de l'animation")
         document.body.classList.remove("final-test")
+
+        achat.classList.add("display")
 
         board1.classList.remove("hidden")
         board2.classList.remove("hidden")
