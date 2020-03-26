@@ -10,18 +10,14 @@
     height: 123px; 
     color: white;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
   .pale{
     width: 33px;
     height: 94px;
     color: white;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
   .mat{
     width: 20px;

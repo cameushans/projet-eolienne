@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Background from '../img/maison-jardin.jpg'
 
 function Check_Btn (e) {
     const pale_top_zone = document.getElementById("pale-top-zone");

@@ -12,7 +12,7 @@ h1{
   display: flex;
   height: 10vh;
   width: 100vw;
-  justify-content: center;
+  justify-content: center ;
   align-items: center;
 }
 #buttons_right{
@@ -62,5 +62,3 @@ h1{
 .wrap{
   flex-wrap: wrap;
 }
-  
-

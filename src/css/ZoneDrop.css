@@ -23,8 +23,8 @@
     padding: 15px;
 }
 .board-rotor{
-    width: 78px;
-    height: 130px;
+    width: 76px;
+    height: 129px;
     border: dashed grey;
   
     position: relative;
@@ -70,14 +70,11 @@
     margin-bottom: -226px;
 }
   .board-mat{
-    width: 28px;
-    height: 308px;
+    width: 26px;
+    height: 306px;
     border: dashed grey;
   
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    position: relative;
-    bottom: 0px;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import css
+// CSS
 import './css/App.css';
 import './css/Animation.css';
 import './css/ZoneDrop.css';
@@ -19,9 +19,9 @@ class App extends Component {
         <Button />
         <main className="flexbox">
           <Board  id="board-1"            className="board">
-            <Card id="rotor"              className="rotor card"    style={{backgroundColor: ' blueviolet'}}  draggable="true">rotor</Card>
-            <Card id="pale-left"          className="pale card"     style={{backgroundColor: 'blue'}}         draggable="true" >L</Card>
-            <Card id="pale-top"           className="pale card"     style={{backgroundColor: 'orange'}}       draggable="true" >Top</Card>
+            <Card id="rotor"              className="rotor card"    style={{backgroundColor:  'blueviolet'}}  draggable="true">rotor</Card>
+            <Card id="pale-left"          className="pale  card"     style={{backgroundColor: 'blue'}}         draggable="true" >L</Card>
+            <Card id="pale-top"           className="pale  card"     style={{backgroundColor: 'orange'}}       draggable="true" >Top</Card>
           </Board>  
           
             
