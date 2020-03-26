@@ -17,7 +17,7 @@ h1{
 }
 #buttons_right{
   position: absolute;
-  top: 22px;
+  top: 115px;
   right: 54px;
   cursor: pointer;
   width: 200px;
@@ -26,8 +26,8 @@ h1{
 }
 #achat{
   position: absolute;
-  bottom: 22px;
-  left: 85vw;
+  bottom: -40px;
+  left: 79vw;
   cursor: pointer;
   padding: 15px;
 }

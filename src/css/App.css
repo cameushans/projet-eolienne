@@ -1,12 +1,13 @@
 .fullheight {
-        min-height: 100vh;
-        font-size: xx-large;
+        min-height: 93vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 .background {
-        /* background-color: #3298dc; */
-        color: #fff;
-        background-image: url('../img/background.jpg');
+        color: black;
+        
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -14,10 +15,36 @@
 
 h2 {
         padding: 10px;
+        font-size: xx-large;
+        text-align: center;
+}
+
+.informations {
+        width: 100vw;
+        display: contents;
+}
+
+.presentation {
+        width: 100vw;
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.jeu {
+        width: 100vw;
+        height: 100vh;
+}
+
+.video {
+        width: 25vw;
+
 }
 
 @media screen and (max-width: 1024px) {
-        h2 {
-                color: black;
+
+        .video {
+                width: 90vw;
         }
 }

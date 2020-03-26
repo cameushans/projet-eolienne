@@ -16,22 +16,28 @@ function App() {
     <>
       <Header />
 
-      <div className="hero background fullheight">
-        <div className="hero-body">
-          <div className="container has-text-centered">
+      <div className="background fullheight">
+        <div className="informations">
+          <div className="presentation">
             {!isLoading && !user && (
               <>
-                <ResponsiveEmbed src='https://www.youtube.com/embed/RPcQLZ0xBAI' ratio='16:9' />
+                <div className="video">
+                  <ResponsiveEmbed src='https://www.youtube.com/embed/RPcQLZ0xBAI' ratio='4:3' />
+                </div>
+                
                 <h2>Accéder au jeu</h2>
                 <button onClick={loginWithRedirect} className="button is-danger">
                   Login
-              </button>
+                </button>
               </>
             )}
             {!isLoading && user && (
               
               <>
-                <Game />
+                <div className="jeu">
+                  <Game />
+                </div>
+                
               </>
             )}
           </div>

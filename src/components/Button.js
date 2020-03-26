@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 // Import function
 import Stop_Btn from './Stop_Btn';
 import Check_Btn from './Check_Btn';
-import Payement from './Payement';
 import Confetti from './Confetti';
 
 

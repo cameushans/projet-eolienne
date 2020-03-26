@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // CSS
-import './css/App.css';
+import './css/Game.css';
 import './css/Animation.css';
 import './css/ZoneDrop.css';
 import './css/DraggableElements.css';
@@ -35,6 +35,7 @@ class App extends Component {
 
               <Board id="rotor-zone"          className="board-rotor"      dataBrand="rotor"></Board>
               <Board id="mat-zone"            className="board-mat"        dataBrand="mat"  ></Board>
+              <a href="/logo192.png" download> Télécharger plans </a>
           </div>
   
   

@@ -1,5 +1,3 @@
-import React, { Component } from 'react'
-
 function Check_Btn (e) {
     const pale_top_zone = document.getElementById("pale-top-zone");
     const pale_left_zone = document.getElementById("pale-left-zone");
@@ -14,11 +12,11 @@ function Check_Btn (e) {
     const achat = document.getElementById("achat");
 
     const elem = 
-    rotor_zone.children.length == 1 && 
-    mat_zone.children.length == 1 &&
-    pale_top_zone.children.length == 1 && 
-    pale_left_zone.children.length == 1 && 
-    pale_right_zone.children.length == 1;
+    rotor_zone.children.length === 1 && 
+    mat_zone.children.length === 1 &&
+    pale_top_zone.children.length === 1 && 
+    pale_left_zone.children.length === 1 && 
+    pale_right_zone.children.length === 1;
     
     if (elem) {
         console.log('tout est bon')

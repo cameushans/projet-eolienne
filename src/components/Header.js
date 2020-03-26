@@ -14,7 +14,7 @@ export default function Header() {
             {/* logo */}
             <div className="infos">
               <div className="logo"></div>
-              <div className="navbar-brand">
+              <div className="brand">
                 
                 <button className="company">Lucéole sky media</button>
               </div>

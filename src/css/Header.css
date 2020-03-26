@@ -29,10 +29,10 @@ button {
         justify-content: space-between;
 }
 
-.infos {
+.infos, .brand, .end {
         display: flex;
 }
 
-.end {
-        display: flex;
+html {
+        margin: -8px;
 }
