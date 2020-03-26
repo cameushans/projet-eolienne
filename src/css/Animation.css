@@ -1,0 +1,133 @@
+/* Key frames */
+
+/* Animation pour déplacer les éléments */
+.deplacement_top{
+    animation-name: deplacement_top;
+    animation-duration: 4s;
+    position: relative;
+    top: 155px
+  }
+  
+  @keyframes deplacement_top {
+    from {
+      top: 135px
+    }
+    to {
+      top: 155px
+    }
+  }
+  
+  .deplacement_left{
+    animation-name: deplacement_left;
+    animation-duration: 4s;
+    position: relative;
+    left: 50px
+  }
+  @keyframes deplacement_left {
+    from {
+      left: 20px
+    }
+    to {
+      left: 50px
+    }
+  }
+  .deplacement_right{
+    animation-name: deplacement_right;
+    animation-duration: 4s;
+    position: relative;
+    right: 50px;
+  }
+  
+  @keyframes deplacement_right {
+    from {
+      right: 20px
+    }
+    to {
+      right: 50px
+    }
+  }
+  
+  .deplacement_mat{
+    animation-name: deplacement_mat;
+    animation-duration: 0.5s;
+    position: relative;
+    bottom: 12px;
+  }
+  
+  @keyframes deplacement_mat {
+    from {
+      bottom: 0px;
+    }
+    to {
+      bottom: 12px;
+    }
+  }
+  .matching_true{
+    animation-duration: 1.5s;
+    animation-name: color_true;
+  }
+  @keyframes color_true {
+    from {
+      background-color: #92DA0C;
+    }
+    25%{
+      background-color: white;
+    }
+    50%{
+      background-color: #92DA0C;
+    }
+    75%{
+      background-color: white;
+    }
+    to {
+      background-color: #92DA0C;
+    }
+  }
+  .matching_false{
+    animation-duration: 1.5s;
+    animation-name: color_false;
+  }
+  @keyframes color_false {
+    from {
+      background-color: red;
+    }
+    25%{
+      background-color: white;
+    }
+    50%{
+      background-color: red;
+    }
+    75%{
+      background-color: white;
+    }
+    to {
+      background-color: red;
+    }
+  }
+  
+  /* Animation pour mettre en matche l'éolienne */
+  .turn_up{
+      animation: flip-diagonal-2-br 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)  infinite alternate both;
+  }
+  
+   @-webkit-keyframes flip-diagonal-2-br {
+      0% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+                transform: rotate3d(0, 1, 0, 0deg);
+      }
+      100% {
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+                transform: rotate3d(0, 1, 0, 360deg);
+      }
+    }
+  
+    @keyframes flip-diagonal-2-br {
+      0% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+                transform: rotate3d(0, 1, 0, 0deg);
+      }
+      100% {
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+                transform: rotate3d(0, 1, 0, 360deg);
+      }
+    }

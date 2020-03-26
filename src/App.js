@@ -1,74 +1,44 @@
-import React, { Component } from 'react';
-import './App.css';
+// src/App.js
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+import React from 'react';
+import 'bulma/css/bulma.css';
+import './css/App.css';
+import { useAuth0 } from './contexts/auth0-context';
+import Header from './components/Header';
 
-    const elements = document.getElementsByTagName('element');
-    const winWidth = window.innerWidth;
-    const winHeight = window.innerHeight;
+import ResponsiveEmbed from 'react-responsive-embed';
+import Game from './Game';
 
-    function getRandomNumber(min, max) {
+function App() {
+  const { isLoading, user, loginWithRedirect } = useAuth0();
 
-      return Math.random() * (max - min) + min;
-    
-    }
+  return (
+    <>
+      <Header />
 
-    for (var i = 0; elements.length; i++) {
-      const thisElement = elements[i];
-
-      const randomTop = getRandomNumber(0, winHeight);
-      const randomLeft = getRandomNumber(0, winWidth);
-
-      thisElement.style.top = randomTop + "px";
-      thisElement.style.left = randomLeft + "px";
-
-      
-
-    }
-    
-  }
-  render() {
-    return (
-      <body>
-        <h1>Title</h1>
-        <section className="game-app wrap">
-
-          <section className="col-item wrap">
-  
-            <div className="element rotor"></div>
-            <div className="element mat INDIANRED"></div>
-            <div className="element triangle"></div>
-            <div className="element socle maroon"></div>
-  
-            <div className="element rotor"></div>
-            <div className="element triangle"></div>
-            <div className="element socle maroon"></div>
-            <div className="element mat INDIANRED"></div>
-  
-          </section>
-  
-          <section className="col-item wrap">
-  
-            <div className="element rotor"></div>
-            <div className="element mat INDIANRED"></div>
-            <div className="element socle maroon"></div>
-            <div className="element triangle"></div>
-  
-            <div className="rotor"></div>
-            <div className="triangle"></div>
-            <div className="mat INDIANRED"></div>
-            <div className="socle maroon"></div>
-
-          </section>
-
-        </section>
-  
-  
-      </body>
-    );
-  }
+      <div className="hero background fullheight">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            {!isLoading && !user && (
+              <>
+                <ResponsiveEmbed src='https://www.youtube.com/embed/RPcQLZ0xBAI' ratio='16:9' />
+                <h2>Accéder au jeu</h2>
+                <button onClick={loginWithRedirect} className="button is-danger">
+                  Login
+              </button>
+              </>
+            )}
+            {!isLoading && user && (
+              
+              <>
+                <Game />
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default App;

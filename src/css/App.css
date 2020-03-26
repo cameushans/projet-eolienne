@@ -1,0 +1,23 @@
+.fullheight {
+        min-height: 100vh;
+        font-size: xx-large;
+}
+
+.background {
+        /* background-color: #3298dc; */
+        color: #fff;
+        background-image: url('../img/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+h2 {
+        padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+        h2 {
+                color: black;
+        }
+}
