@@ -35,7 +35,6 @@ class App extends Component {
 
               <Board id="rotor-zone"          className="board-rotor"      dataBrand="rotor"></Board>
               <Board id="mat-zone"            className="board-mat"        dataBrand="mat"  ></Board>
-              <a href="/logo192.png" download> Télécharger plans </a>
           </div>
   
   

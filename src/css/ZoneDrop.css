@@ -23,32 +23,30 @@
   padding: 15px;
 }
 .board-rotor{
-  width: 76px;
-  height: 129px;
+  width: 200px;
+  height: 111px;
   border: dashed grey;
-
   position: relative;
-  top: 70px;
-
+  top: 109px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .board-pale-top{
-  width: 39px;
-  height: 100px;
+  width: 100px;
+  height: 111px;
   border: dashed grey;
 
   position: relative;
-  top: 135px;
+  top: 185px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .board-pale-left{
-  width: 39px;
-  height: 100px;
+  width: 100px;
+  height: 111px;
   border: dashed grey;
 
   display: flex;
@@ -56,8 +54,8 @@
   align-items: center;
 }
 .board-pale-right{
-  width: 39px;
-  height: 100px;
+  width: 100px;
+  height: 111px;
   border: dashed grey;
 
   display: flex;
@@ -65,13 +63,13 @@
   align-items: center;
 }
 .pale-zone{
-  width: 230px;
+  width: 402px;
   justify-content: space-between;
-  margin-bottom: -226px;
+  margin-bottom: -329px;
 }
 .board-mat{
-  width: 26px;
-  height: 306px;
+  width: 275px;
+  height: 125px;
   border: dashed grey;
 
   display: flex;

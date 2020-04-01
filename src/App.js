@@ -22,7 +22,7 @@ function App() {
             {!isLoading && !user && (
               <>
                 <div className="video">
-                  <ResponsiveEmbed src='https://www.youtube.com/embed/RPcQLZ0xBAI' ratio='4:3' />
+                  <ResponsiveEmbed src='https://www.youtube.com/embed/V2_TNk8K9cU' allowfullscreen />
                 </div>
                 
                 <h2>Accéder au jeu</h2>

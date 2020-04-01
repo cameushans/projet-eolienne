@@ -1,5 +1,5 @@
 .fullheight {
-        min-height: 93vh;
+        min-height: 92vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -7,7 +7,7 @@
 
 .background {
         color: black;
-        
+        background-image: url('../img/background.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
