@@ -1,29 +1,53 @@
 /* élements draggable */
 .flexbox .board .card{
-    cursor: pointer;
-    margin-bottom: 25px;
-    justify-content: center;
-    align-items: center;
+  cursor: pointer;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
 }
-  .rotor{
-    width: 70px;
-    height: 123px; 
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.rotor{
+  width: 195px;
+  height: 105px; 
+  font-weight: bold;
+  text-align: center;
 }
-  .pale{
-    width: 33px;
-    height: 94px;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pale{
+  width: 100px;
+  height: 105px;
+  font-weight: bold;
+  text-align: center;
 }
-  .mat{
-    width: 20px;
-    height: 300px;
+.mat{
+  width: 270px;
+  height: 120px;
+}
+
+#rotor {
+  background-image: url('../img/rotor-coupe-2D.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+#pale-left {
+  background-image: url('../img/pale-g-coupe-2D.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+#pale-top {
+  background-image: url('../img/pale-h-coupe-2D.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+#pale-right {
+  background-image: url('../img/pale-d-coupe-2D.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+#mat {
+  background-image: url('../img/socle-coupe-2D.JPG');
+  background-position: center;
+  background-size: cover;
 }

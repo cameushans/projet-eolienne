@@ -4,6 +4,7 @@
 .deplacement_top{
     animation-name: deplacement_top;
     animation-duration: 4s;
+    position: relative;
     top: 155px
   }
   

@@ -1,0 +1,64 @@
+*{margin: 0; padding: 0%; box-sizing: border-box;}
+body{
+  background-color: #F3F3F3;  
+}
+.final-test{
+  background-image: url("../img/maison-jardin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+h1{
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  justify-content: center ;
+  align-items: center;
+}
+#buttons_right{
+  position: absolute;
+  top: 115px;
+  right: 54px;
+  cursor: pointer;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+#achat{
+  position: absolute;
+  bottom: -40px;
+  left: 79vw;
+  cursor: pointer;
+  padding: 15px;
+}
+.hidden{
+  visibility: hidden;
+}
+
+/* Flex */
+.flexbox{
+  display: flex;  
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+  padding: 15px;
+}
+.col-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+  height: 90vh;
+  background-color: darkgrey;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.wrap{
+  flex-wrap: wrap;
+}

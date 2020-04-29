@@ -1,23 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
-
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
+import { Auth0Provider } from './contexts/auth0-context';
 
-class Web_app extends React.Component {
-    
-}
-render(
-        <App />,
-        document.getElementById('root')
+ReactDOM.render(
+  <Auth0Provider>
+    <App />
+  </Auth0Provider>,
+  document.getElementById('root')
 );
-
-
-/*
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
-*/
