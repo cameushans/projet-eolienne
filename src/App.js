@@ -6,6 +6,7 @@ import './css/App.css';
 import { useAuth0 } from './contexts/auth0-context';
 import Header from './components/Header';
 import Game from './Game';
+import videos from '../src/img/Sky-media.mp4';
 
 function App() {
   const { isLoading, user, loginWithRedirect } = useAuth0();
@@ -21,7 +22,7 @@ function App() {
               <>
                 <div className="video">
                   <video controls >
-                    <source src="../img/Sky-media.mp4" type="video/mp4" />
+                    <source src={videos} type="video/mp4" />
                   </video>
                 </div>
                 
