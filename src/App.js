@@ -5,9 +5,8 @@ import 'bulma/css/bulma.css';
 import './css/App.css';
 import { useAuth0 } from './contexts/auth0-context';
 import Header from './components/Header';
-
-import ResponsiveEmbed from 'react-responsive-embed';
 import Game from './Game';
+import videos from '../src/img/Sky-media.mp4';
 
 function App() {
   const { isLoading, user, loginWithRedirect } = useAuth0();
@@ -22,7 +21,9 @@ function App() {
             {!isLoading && !user && (
               <>
                 <div className="video">
-                  <ResponsiveEmbed src='https://www.youtube.com/embed/V2_TNk8K9cU' allowfullscreen />
+                  <video controls >
+                    <source src={videos} type="video/mp4" />
+                  </video>
                 </div>
                 
                 <h2>Accéder au jeu</h2>
