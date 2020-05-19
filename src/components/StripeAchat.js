@@ -1,17 +1,16 @@
 import React from "react";
-// import ReactDOM from "react-dom";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
-import { toast } from "react-toastify";
-
+import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+// import "./styles.css";
 
 toast.configure();
 
 function StripeAchat() {
   const [product] = React.useState({
     name: "Tesla Roadster",
-    price: 64998.67,
+    price: 20,
     description: "Cool car"
   });
 
@@ -31,10 +30,7 @@ function StripeAchat() {
 
   return (
     <div className="container">
-      <div className="product">
-        <h1>{product.name}</h1>
-        <h3>On Sale · ${product.price}</h3>
-      </div>
+
       <StripeCheckout
         stripeKey="pk_test_3KHIoVpjbyTbhi9AHXGR7R4n00s3sUtLTe"
         token={handleToken}
@@ -42,9 +38,14 @@ function StripeAchat() {
         name="Tesla Roadster"
         billingAddress
         shippingAddress
+        className="stripe"
       />
     </div>
   );
 }
-
 export default StripeAchat
+
+// <div className="product">
+// <h1>{product.name}</h1>
+// <h3>On Sale · ${product.price}</h3>
+// </div>
