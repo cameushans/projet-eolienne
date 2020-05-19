@@ -32,7 +32,7 @@ function StripeAchat() {
     <div className="container">
 
       <StripeCheckout
-        stripeKey="pk_test_3KHIoVpjbyTbhi9AHXGR7R4n00s3sUtLTe"
+        stripeKey={process.env.STRIPE_PUBLIC_KEY}
         token={handleToken}
         amount={product.price * 100}
         name="Tesla Roadster"
