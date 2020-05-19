@@ -10,6 +10,7 @@ import './css/DraggableElements.css';
 import Board from './components/Board';
 import Card from './components/Card';
 import Button from './components/Button';
+import StripeAchat  from "./components/StripeAchat";
   
 
 class App extends Component {
@@ -42,6 +43,7 @@ class App extends Component {
             <Card id="mat"                className="mat card"      style={{backgroundColor: '#FA8072'}}      draggable="true" />
             <Card id="pale-right"         className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  >R</Card>
           </Board>          
+          <StripeAchat />
         </main>
       </div>
     );

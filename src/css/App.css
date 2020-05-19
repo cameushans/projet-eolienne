@@ -62,3 +62,12 @@ h1{
 .wrap{
   flex-wrap: wrap;
 }
+.stripe{
+  background-color: white;
+  color: black; 
+  height: 50px; width: 50px; 
+  position: absolute; 
+  top: 300px; 
+  right: 500px;
+  border-radius: 5px
+}

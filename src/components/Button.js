@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 // Import function
 import Stop_Btn from './Stop_Btn';
 import Check_Btn from './Check_Btn';
-import Payement from './Payement';
 import Confetti from './Confetti';
 
 
@@ -35,13 +34,6 @@ export default function ContainedButtons() {
         </Button>
       </div>
       <Button id="achat" variant="contained" color="primary" onClick={Confetti}>Acheter</Button>
-      
-      {/* <Button variant="contained" disabled>
-        Disabled
-      </Button>
-      <Button variant="contained" color="primary" href="#contained-buttons">
-        Link
-      </Button> */}
     </div>
   );
 }
