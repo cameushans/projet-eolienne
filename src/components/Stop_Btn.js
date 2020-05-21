@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
 function Stop_Btn () {
     const pale_top_zone = document.getElementById("pale-top-zone");

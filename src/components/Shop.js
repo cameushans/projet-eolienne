@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import StripeAchat  from "./StripeAchat";
 
 class Shop extends Component {
     render() {
@@ -19,7 +20,7 @@ class Shop extends Component {
                     </section>
                 </main>
                 <footer>
-
+                    <StripeAchat />
                 </footer>
             </body>
         )

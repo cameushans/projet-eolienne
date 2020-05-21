@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
 function Check_Btn (e) {
     const pale_top_zone = document.getElementById("pale-top-zone");
@@ -14,11 +14,11 @@ function Check_Btn (e) {
     const achat = document.getElementById("achat");
 
     const elem = 
-    rotor_zone.children.length == 1 && 
-    mat_zone.children.length == 1 &&
-    pale_top_zone.children.length == 1 && 
-    pale_left_zone.children.length == 1 && 
-    pale_right_zone.children.length == 1;
+    rotor_zone.children.length === 1 && 
+    mat_zone.children.length === 1 &&
+    pale_top_zone.children.length === 1 && 
+    pale_left_zone.children.length === 1 && 
+    pale_right_zone.children.length === 1;
     
     if (elem) {
         console.log('tout est bon')
@@ -45,16 +45,3 @@ function Check_Btn (e) {
 }
 
 export default Check_Btn
-
- 
-    // board1.style.display = "none"
-    // board2.style.display = "none"
-    
-    // pale_top_zone.style.display = "block"
-    // pale_left_zone.style.display = "block"
-    // pale_right_zone.style.display = "block"
-    // mat_zone.style.display = "block"
-    // pale_zone.style.display = "block"
-    
-    // pale_left_zone.classList.add("deplacement_left")
-    // pale_right_zone.classList.add("deplacement_right")

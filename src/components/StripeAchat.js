@@ -43,8 +43,3 @@ function StripeAchat() {
   );
 }
 export default StripeAchat
-
-// <div className="product">
-// <h1>{product.name}</h1>
-// <h3>On Sale · ${product.price}</h3>
-// </div>
