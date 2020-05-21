@@ -11,7 +11,13 @@ import Board from './components/Board';
 import Card from './components/Card';
 import Button from './components/Button';
 import StripeAchat  from "./components/StripeAchat";
+import Shop from "./components/Shop"
   
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
+
 
 class App extends Component {
   render(){
@@ -44,6 +50,9 @@ class App extends Component {
             <Card id="pale-right"         className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  >R</Card>
           </Board>          
           <StripeAchat />
+          <Router>
+            <Route exact path='/shop' component={Shop}/>
+          </Router>
         </main>
       </div>
     );

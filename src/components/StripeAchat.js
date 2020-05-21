@@ -1,22 +1,21 @@
 import React from "react";
-import StripeCheckout from "react-stripe-checkout";
-import axios from "axios";
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-// import "./styles.css";
 
 toast.configure();
 
 function StripeAchat() {
   const [product] = React.useState({
-    name: "Tesla Roadster",
+    name: "Module",
     price: 20,
-    description: "Cool car"
+    description: "Module of wind turbine"
   });
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
-      "http://localhost:8080/payment",
+      "http://localhost:5035/payment",
       { token, product }
     );
     const { status } = response.data;
@@ -32,7 +31,7 @@ function StripeAchat() {
     <div className="container">
 
       <StripeCheckout
-        stripeKey={process.env.STRIPE_PUBLIC_KEY}
+        stripeKey="pk_test_3KHIoVpjbyTbhi9AHXGR7R4n00s3sUtLTe"
         token={handleToken}
         amount={product.price * 100}
         name="Tesla Roadster"

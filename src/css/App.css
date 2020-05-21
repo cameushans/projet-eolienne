@@ -67,3 +67,11 @@ h1{
   top: 400px; 
   right: 500px;
 }
+
+.card2{
+  height: 354.33px;
+  width: 384px;
+  margin: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
