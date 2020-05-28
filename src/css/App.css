@@ -11,7 +11,7 @@ body{
   height: 80vh;
 }
 #footer_shop{
-  background-color: #474747;
+  background-color: rgba(16, 14, 14, 0.892);
   height: 200px;
   display: flex;
   justify-content: center;
@@ -23,6 +23,26 @@ body{
   list-style:none;
   color: white;
 }
+.photographie {
+  height: 269px;
+  width: 384px;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(0.8);
+}
+.area-text {
+  height: 25%;
+  width: 100%;
+  align-items: center;
+}
+#description_produit{
+  position: relative;
+  left: 50px;
+}
+#price{
+  position: relative;
+  left: 250px;
+}
 .card2{
   height: 354.33px;
   width: 384px;
@@ -30,9 +50,67 @@ body{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 }
+.card:hover , .card2:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 .btn_blue{
   background-color: #3679F7;
 }
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 90%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
+}
+
+.form__btn{
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+}
+
+.form__field~ .form__label{
+   
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
 
 /* fin  */
 
@@ -311,6 +389,7 @@ h1{
 
 .cart-row {
   display: flex;
+  justify-content: center;
 }
 
 .cart-item {
