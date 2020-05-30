@@ -9,18 +9,15 @@
     width: 100%;
     max-width: 300px;
     background-color: bisque;
-    padding: 15px;
+    padding: 99px 15px;
     flex-wrap: wrap;
 }
   .flexbox .central_column{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-  
     width: 100%;
-    max-width: 900px;
-    padding: 15px;
+    padding: 99px 15px;
 }
 .board-rotor{
     width: 76px;

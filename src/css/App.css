@@ -8,12 +8,18 @@ body{
   height: 72px;
 }
 .li_nav{
-  padding: 0 2px 0 5px;
+  padding: 8px 20px 0 7px;
   text-decoration: none;
   list-style:none;
   color: white;
 }
-
+.flex_end{
+  justify-content: flex-end;
+}
+#panier{
+  position: relative;
+  top: 10px;
+}
 .photographie {
   height: 269px;
   width: 384px;
@@ -169,32 +175,21 @@ h1{
   align-items: center;
 }
 #buttons_right{
-  position: absolute;
-  top: 22px;
-  right: 54px;
+  position: relative;
+  top: -92px;
   cursor: pointer;
   width: 200px;
   display: flex;
   justify-content: space-around;
-}
-#achat{
-  position: absolute;
-  bottom: 22px;
-  left: 85vw;
-  cursor: pointer;
-  padding: 15px;
 }
 .hidden{
   visibility: hidden;
 }
 
 .flexbox{
-  display: flex;  
+  display: flex;
   justify-content: space-between;
-
   width: 100%;
-  height: 100vh;
-
   overflow: hidden;
   padding: 15px;
 }

@@ -4,20 +4,14 @@ import StripeAchat  from "./StripeAchat";
 
 import rotor3D from '../img/rotor3D.JPG'
 import socle3D from '../img/socle3D.JPG'
+import { Nav } from "./Nav";
 
 
 class Shop extends Component {
     render() {
         return (
             <body className="">
-                <nav id="nav">
-        {/*            <ul className="row">
-                        <li className="white_color li_nav">Name</li>
-                        <li className="white_color li_nav">Name</li>
-                        <li className="white_color li_nav">Name</li>
-                    </ul>
-        */}
-                </nav>
+                <Nav />
                 <main>
                     <h2 style={{textAlign: 'center'}}>Shop Luxéole</h2>
                     <section className="row around wrap">

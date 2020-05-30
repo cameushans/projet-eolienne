@@ -33,7 +33,6 @@ export default function ContainedButtons() {
           Stop !
         </Button>
       </div>
-      <Button id="achat" variant="contained" color="primary" onClick={Confetti}>Acheter</Button>
     </div>
   );
 }

@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import Board from './Board';
 import Card from './Card';
 import Button from './Button';
+import { Nav } from "./Nav";
 
 class Game_app extends Component {
     render() {
         return (
             <div>
-            <Button />
+            <Nav />
             <main className="flexbox">
               <Board  id="board-1"            className="board">
                 <Card id="rotor"              className="rotor card"    style={{backgroundColor:  'blueviolet'}}  draggable="true">rotor</Card>
@@ -30,6 +31,7 @@ class Game_app extends Component {
       
       
               <Board id="board-3"             className="board">
+                <Button />
                 <Card id="mat"                className="mat card"      style={{backgroundColor: '#FA8072'}}      draggable="true" />
                 <Card id="pale-right"         className="pale  card"     style={{backgroundColor: 'crimson'}}      draggable="true"  >R</Card>
               </Board>          
