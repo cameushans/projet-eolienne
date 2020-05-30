@@ -7,22 +7,13 @@ body{
   background-color: #474747;
   height: 72px;
 }
-#main_shop{
-  height: 80vh;
-}
-#footer_shop{
-  background-color: rgba(16, 14, 14, 0.892);
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .li_nav{
   padding: 0 2px 0 5px;
   text-decoration: none;
   list-style:none;
   color: white;
 }
+
 .photographie {
   height: 269px;
   width: 384px;
@@ -53,6 +44,43 @@ body{
 .card:hover , .card2:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+/* Info bulle */
+
+.info {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px gray dotted; /* On souligne le texte. */
+}
+.info .wesh {
+  display: none; /* On masque l'infobulle. */
+   
+}
+.info:hover {
+  background: none; /* Correction d'un bug d'Internet Explorer. */
+  z-index: 500; /* On définit une valeur pour l'ordre d'affichage. */
+
+  /* cursor: help;  On change le curseur par défaut par un curseur d'aide. */
+}
+.info:hover .wesh {
+  display: inline; /* On affiche l'infobulle. */
+  position: absolute;
+
+   white-space: nowrap; /* On change la valeur de la propriété white-space pour qu'il n'y ait pas de retour à la ligne non désiré. */
+
+  top: 30px; /* On positionne notre infobulle. */
+  left: 20px;
+
+  background: white;
+
+  color: black;
+  padding: 3px;
+
+  border: 1px solid grey;
+  border-left: 4px solid grey;
+}
+
+
 .btn_blue{
   background-color: #3679F7;
 }
@@ -61,7 +89,8 @@ body{
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 50%;
+  width: 70%;
+  display: flex;
 }
 
 .form__field {
@@ -89,9 +118,11 @@ body{
 .form__btn{
   font-size: 20px;
   padding: 10px;
+  margin-top: 10px;
   border-radius: 5px;
   border: none;
   background-color: white;
+  margin: 0 30px ;
 }
 
 .form__field~ .form__label{
@@ -101,7 +132,7 @@ body{
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #11998e;
+    color: rgb(240, 235, 235);
     font-weight: 700;
 
   padding-bottom: 6px;
@@ -111,8 +142,14 @@ body{
   border-image-slice: 1;
 }
 
-
-/* fin  */
+#footer_shop{
+  background-color: rgba(16, 14, 14, 0.892);
+  display: flex;
+  margin-top: 50px;
+  padding: 50px 0 50px 0;
+  justify-content: center;
+  align-items: center;
+}
 
 .final-test{
   background-image: url("../img/maison-jardin.jpg");
@@ -181,16 +218,9 @@ h1{
 .wrap{
   flex-wrap: wrap;
 }
-/* .stripe{
-  position: absolute; 
-  top: 400px; 
-  right: 500px;
-} */
 
 
                                  /* IMPORT */
-
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 
@@ -471,6 +501,6 @@ h1{
 
 .btn-purchase {
   display: block;
-  margin: 40px auto 80px auto;
-  font-size: 1.75em;
+  margin:  auto;
+  font-size: 1.45em;
 }

@@ -18,29 +18,32 @@ class Shop extends Component {
                     </ul>
         */}
                 </nav>
-                <main id="main_shop">
+                <main>
                     <h2 style={{textAlign: 'center'}}>Shop Luxéole</h2>
-                    <section className="row around">
-                        <div className="card2">
+                    <section className="row around wrap">
+                        <div className="card2 info wrap">
                             <img className="photographie" src={rotor3D} />
                             <div className="row area-text">
                                 <span id="description_produit">Description</span>
                                 <span id="price">3€</span>
                             </div>
+                            <div className="wesh">contraction de Wireless Fidelity<br/>2ème ligne </div>
                         </div>
-                        <div className="card2"> 
+                        <div className="card2 info"> 
                             <img className="photographie" src={socle3D} />
                             <div className="row area-text">
                                 <span id="description_produit">Description</span>
                                 <span id="price">3€</span>
                             </div>
+                            <div className="wesh">contraction de Wireless Fidelity<br/>2ème ligne </div>
                         </div>
-                        <div className="card2"> 
+                        <div className="card2 info"> 
                             <img className="photographie" src={rotor3D} />
                             <div className="row area-text">
                                 <span id="description_produit">Description</span>
                                 <span id="price">3€</span>
                             </div>
+                            <div className="wesh">contraction de Wireless Fidelity<br/>2ème ligne </div>
                         </div>
                     </section>
 
@@ -55,9 +58,7 @@ class Shop extends Component {
                             <strong class="cart-total-title">Total</strong>
                             <span class="cart-total-price">0€</span>
                         </div>
-                        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-                       {/* <StripeAchat>
-                        </StripeAchat>  */}
+                        <StripeAchat />
                     </section>
                 </main>
                 <footer id="footer_shop" className="row">

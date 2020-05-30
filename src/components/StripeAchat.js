@@ -38,7 +38,9 @@ function StripeAchat() {
         billingAddress
         shippingAddress
         className="stripe"
-      />
+      >
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+      </StripeCheckout>
     </div>
   );
 }
