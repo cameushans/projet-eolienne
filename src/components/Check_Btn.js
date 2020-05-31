@@ -11,7 +11,7 @@ function Check_Btn (e) {
     const board1 = document.getElementById("board-1")
     const board2 = document.getElementById("board-3")
 
-    const achat = document.getElementById("achat");
+    // const achat = document.getElementById("achat");
 
     const elem = 
     rotor_zone.children.length === 1 && 
@@ -26,7 +26,7 @@ function Check_Btn (e) {
         // document.body.style.backgroundImage = "url(" + { Background } + ")"
         document.body.classList.add("final-test")
 
-        achat.classList.remove("display")
+        // achat.classList.remove("display")
         
         board1.classList.add("hidden")
         board2.classList.add("hidden")

@@ -5,6 +5,7 @@ import './css/App.css';
 import './css/Animation.css';
 import './css/ZoneDrop.css';
 import './css/DraggableElements.css';
+import './css/shop.css';
 
 // Components 
 import Shop from "./components/Shop"

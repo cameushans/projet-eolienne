@@ -9,7 +9,8 @@
     width: 100%;
     max-width: 300px;
     background-color: bisque;
-    padding: 99px 15px;
+    /* padding: 99px 15px; */
+    height: 694px;
     flex-wrap: wrap;
 }
   .flexbox .central_column{
@@ -17,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    /* height: 694px; */
     padding: 99px 15px;
 }
 .board-rotor{
