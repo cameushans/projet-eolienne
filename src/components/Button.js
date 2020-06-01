@@ -25,7 +25,7 @@ export default function ContainedButtons() {
   return (
     <div className={classes.root}>
       {/* <Button variant="contained">Default</Button> */}
-      <div id="buttons_right">
+      <div id="btn_commande">
         <Button variant="contained" color="primary" onClick={Check_Btn}>
           Check !
         </Button>

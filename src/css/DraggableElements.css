@@ -11,6 +11,7 @@
     color: white;
     font-weight: bold;
     text-align: center;
+    z-index: 2;
 }
   .pale{
     width: 33px;
@@ -18,8 +19,10 @@
     color: white;
     font-weight: bold;
     text-align: center;
+    z-index: 3;
 }
   .mat{
     width: 20px;
     height: 300px;
+    z-index: 1;
 }
