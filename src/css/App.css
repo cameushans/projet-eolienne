@@ -49,6 +49,9 @@ body{
 .wrap{
   flex-wrap: wrap;
 }
+.margin50{
+  margin: 50px 0;
+}
 .flex_end{
   justify-content: flex-end;
 }

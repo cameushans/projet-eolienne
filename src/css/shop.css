@@ -20,6 +20,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     height: 25%;
     width: 100%;
     align-items: center;
+    justify-content: space-around;
   }
   #description_produit{
     position: relative;
@@ -64,7 +65,6 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border: 1px solid grey;
     border-left: 4px solid grey;
   }
-  
   
   .btn_blue{
     background-color: #3679F7;
@@ -163,7 +163,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 .container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 0 1.5em;
 }
 .section-header {
