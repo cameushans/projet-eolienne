@@ -10,6 +10,7 @@ function StripeAchat() {
   const [product] = React.useState({
     name: "Module",
     price: 20,
+    // price: this.props.total.totalPrice,
     description: "Module of wind turbine"
   });
 
@@ -39,7 +40,7 @@ function StripeAchat() {
         shippingAddress
         className="stripe"
       >
-        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        <button className="btn btn-primary btn-purchase" type="button">PURCHASE</button>
       </StripeCheckout>
     </div>
   );
