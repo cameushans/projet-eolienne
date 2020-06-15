@@ -38,7 +38,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     text-decoration: none;
     border-bottom: 1px gray dotted; /* On souligne le texte. */
   }
-  .info .wesh {
+  .info .blablaBulle {
     display: none; /* On masque l'infobulle. */
      
   }
@@ -48,7 +48,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   
     /* cursor: help;  On change le curseur par défaut par un curseur d'aide. */
   }
-  .info:hover .wesh {
+  .info:hover .blablaBulle {
     display: inline; /* On affiche l'infobulle. */
     position: absolute;
   
@@ -71,14 +71,23 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
 
-  .articlesPanier {
-    height: 70px; 
-    width: 700px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    margin-bottom: 10px;
-  }
+.articlesPanier {
+  height: 70px; 
+  width: 700px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  
+  position: relative;
+  left: 90px;
+}
+
+.articlesPanierImg {
+  height: 50px; 
+  width: 50px; 
+}
 
 
 

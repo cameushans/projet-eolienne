@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import StripeAchat  from "./StripeAchat";
 
+// img
+import rotor3D from '../img/rotor3D.JPG'
+import socle3D from '../img/socle3D.JPG'
+
 class Caisse extends Component {
     render() {
         return (
@@ -14,11 +18,34 @@ class Caisse extends Component {
                 <div className="cart-total">
                     <strong className="cart-total-title">Total</strong>
                     <span className="cart-total-price">{this.props.details.totalPrice} €</span>
-                    <div id="plan" style={{backgroundColor: 'green'}}></div>
-                    <div id="battrie" style={{backgroundColor: 'pink'}}></div>
-                    <div id="lampe" style={{backgroundColor: 'brown'}}></div>
+                    {   this.props.details.planActive === true ? 
+                        <div id="plan"  className="articlesPanier">
+                            <img src={socle3D} className="articlesPanierImg" />
+                            <div>Plan du produit </div>
+                            <button className="btn btn-danger">Remove</button>
+                        </div>
+                        : console.log("MARCHE PAS !")
+                    }
+
+                    {   this.props.details.lampActive === true ? 
+                        <div id="lamp"  className="articlesPanier">
+                            <img src={rotor3D} className="articlesPanierImg" />
+                            <div>Lampe qui clignote</div>
+                            <button className="btn btn-danger">Remove</button>
+                        </div>
+                        : console.log("MARCHE PAS !")
+                    }
+
+                    {   this.props.details.battrieActive === true ? 
+                        <div id="battrie"  className="articlesPanier">
+                            <img src={socle3D} className="articlesPanierImg" />
+                            <div>Battrie qui tourne</div>
+                            <button className="btn btn-danger">Remove</button>
+                        </div>
+                        : console.log("MARCHE PAS !")
+                    }
                 </div>
-                <StripeAchat total={this.props.details}/>
+                <StripeAchat total={this.props.details.totalPrice}/>
             </section>
         )
     }
