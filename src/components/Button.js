@@ -6,8 +6,10 @@ import Button from '@material-ui/core/Button';
 // Import function
 import Stop_Btn from './Stop_Btn';
 import Check_Btn from './Check_Btn';
-import Confetti from './Confetti';
+// import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
+// const { width, height } = useWindowSize()
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,14 +27,17 @@ export default function ContainedButtons() {
   return (
     <div className={classes.root}>
       {/* <Button variant="contained">Default</Button> */}
+      
       <div id="btn_commande">
         <Button variant="contained" color="primary" onClick={Check_Btn}>
           Check !
+          {/* <Confetti></Confetti>*/}
         </Button>
         <Button variant="contained" color="secondary" onClick={Stop_Btn}>
           Stop !
         </Button>
       </div>
     </div>
+    
   );
 }

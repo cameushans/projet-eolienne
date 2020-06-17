@@ -14,6 +14,14 @@ function StripeAchat() {
     description: "Module of wind turbine"
   });
 
+  // export const [product] = {
+  //   articles: {
+  //     name: null,
+  //     number: null,
+  //     totalPrice: null
+  //   },
+  // };
+
   async function handleToken(token, addresses) {
     const response = await axios.post(
       "http://localhost:5035/payment",

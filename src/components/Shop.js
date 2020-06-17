@@ -16,21 +16,34 @@ class Shop extends Component {
             elemLampe: 8,
             elemPlan: 19,
             planActive: false,
-            lampActive: false,
+            lampeActive: false,
             battrieActive: false
         }
     }
+    // Add article btn
     Plan() {
         this.setState({totalPrice: this.state.totalPrice + this.state.elemPlan, planActive: true})
     }
-
     Battrie() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.elemBattrie, lampActive: true})
+        this.setState({totalPrice: this.state.totalPrice + this.state.elemBattrie, battrieActive: true})
+    }
+    Lampe() {
+        this.setState({totalPrice: this.state.totalPrice + this.state.elemLampe, lampeActive: true})
     }
 
-    Lampe() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.elemLampe, battrieActive: true})
+    // Remove btn
+    removePlan() {
+        this.setState({totalPrice: this.state.totalPrice - this.state.elemPlan, planActive: false})
     }
+
+    removeBattrie() {
+        this.setState({totalPrice: this.state.totalPrice - this.state.elemBattrie, battrieActive: false})
+    }
+
+    removeLampe() {
+        this.setState({totalPrice: this.state.totalPrice - this.state.elemLampe, lampeActive: false})
+    }
+
 
     render() {
         return (
@@ -64,7 +77,12 @@ class Shop extends Component {
                             <div className="blablaBulle">battrie en fusion<br/>Chargeurs Batterie</div>
                         </div>
                     </section>
-                    <Caisse details={this.state} />
+                    <Caisse 
+                        details={this.state}
+                        removePlan={this.removePlan.bind(this)} 
+                        removeLampe={this.removeLampe.bind(this)} 
+                        removeBattrie={this.removeBattrie.bind(this)} 
+                     />
                 </main>
             </div>
         )
