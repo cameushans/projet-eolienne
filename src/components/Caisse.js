@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import StripeAchat  from "./StripeAchat";
-// import {removeLampe} from './Shop'
+import StripeAchat  from "../functions/StripeAchat";
 // img
 import rotor3D from '../img/rotor3D.JPG'
 import socle3D from '../img/socle3D.JPG'
 
 class Caisse extends Component {
-
     render() {
         return (
             <section id="caisse" className="container content-section margin50">
@@ -19,7 +17,7 @@ class Caisse extends Component {
                 <div className="cart-total">
                     <strong className="cart-total-title">Total</strong>
                     <span className="cart-total-price">{this.props.details.totalPrice} €</span>
-                    {   this.props.details.planActive === true ? 
+                    {   this.props.details.isPlan === true ? 
                         <div id="plan"  className="articlesPanier">
                             <img src={socle3D} className="articlesPanierImg" alt="socle" />
                             <div>Plan du produit </div>
@@ -28,7 +26,7 @@ class Caisse extends Component {
                         : console.log("MARCHE PAS !")
                     }
 
-                    {   this.props.details.lampeActive === true ? 
+                    {   this.props.details.isLampe === true ? 
                         <div id="lamp"  className="articlesPanier">
                             <img src={rotor3D} className="articlesPanierImg" alt="rotor" />
                             <div>Lampe qui clignote</div>
@@ -36,7 +34,7 @@ class Caisse extends Component {
                         </div>
                         : console.log("MARCHE PAS !")
                     }
-                    {   this.props.details.battrieActive === true ? 
+                    {   this.props.details.isBattrie === true ? 
                         <div id="battrie"  className="articlesPanier">
                             <img src={socle3D} className="articlesPanierImg" alt="socle"/>
                             <div>Battrie qui tourne</div>

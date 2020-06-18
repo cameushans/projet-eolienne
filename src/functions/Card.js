@@ -2,8 +2,6 @@ import React from 'react'
 
 function Card(props) {
     const dragStart = e => {
-        // console.log(e)
-        // console.log(e.target.id)
         e.dataTransfer.setData('text', e.target.id);
     }
 
@@ -15,7 +13,6 @@ function Card(props) {
         e.stopPropagation();
         e.target.style.display = "block";
     }
-
      
     return (
         <div

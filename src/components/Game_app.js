@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Board from './Board';
-import Card from './Card';
-import Button from './Button';
+import Board from '../functions/Board';
+import Card from '../functions/Card';
+import Button from '../functions/Button';
 import { Nav } from "./Nav";
 
 class Game_app extends Component {
@@ -11,7 +11,7 @@ class Game_app extends Component {
             <Nav />
             <main className="flexbox">
               <Board  id="board-1"            className="board">
-                <Card id="rotor"              className="rotor card"    style={{backgroundColor:  'blueviolet'}}  draggable="true">rotor</Card>
+                <Card id="rotor"              className="rotor card"     style={{backgroundColor:  'blueviolet'}}  draggable="true">rotor</Card>
                 <Card id="pale-left"          className="pale  card"     style={{backgroundColor: 'blue'}}         draggable="true" >L</Card>
                 <Card id="pale-top"           className="pale  card"     style={{backgroundColor: 'orange'}}       draggable="true" >Top</Card>
               </Board>  

@@ -1,49 +1,48 @@
 import React, { Component } from 'react'
+import {Nav} from "./Nav";
 import Caisse  from "./Caisse";
 
 import rotor3D from '../img/rotor3D.JPG'
 import socle3D from '../img/socle3D.JPG'
-import { Nav } from "./Nav";
-
-
 
 class Shop extends Component {
     constructor(){
         super()
         this.state = {
             totalPrice: 0,
-            elemBattrie: 12,
-            elemLampe: 8,
-            elemPlan: 19,
-            planActive: false,
-            lampeActive: false,
-            battrieActive: false
+            planPrice: 19,
+            lampePrice: 8,
+            battriePrice: 12,
+
+            isPlan: false,
+            isLampe: false,
+            isBattrie: false
         }
     }
+    
     // Add article btn
     Plan() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.elemPlan, planActive: true})
+        this.setState({totalPrice: this.state.totalPrice + this.state.planPrice, isPlan: true})
     }
     Battrie() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.elemBattrie, battrieActive: true})
+        this.setState({totalPrice: this.state.totalPrice + this.state.battriePrice, isBattrie: true})
     }
     Lampe() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.elemLampe, lampeActive: true})
+        this.setState({totalPrice: this.state.totalPrice + this.state.lampePrice, isLampe: true})
     }
 
     // Remove btn
     removePlan() {
-        this.setState({totalPrice: this.state.totalPrice - this.state.elemPlan, planActive: false})
+        this.setState({totalPrice: this.state.totalPrice - this.state.planPrice, isPlan: false})
     }
 
     removeBattrie() {
-        this.setState({totalPrice: this.state.totalPrice - this.state.elemBattrie, battrieActive: false})
+        this.setState({totalPrice: this.state.totalPrice - this.state.battriePrice, isBattrie: false})
     }
 
     removeLampe() {
-        this.setState({totalPrice: this.state.totalPrice - this.state.elemLampe, lampeActive: false})
+        this.setState({totalPrice: this.state.totalPrice - this.state.lampePrice, isLampe: false})
     }
-
 
     render() {
         return (
@@ -56,7 +55,7 @@ class Shop extends Component {
                             <img className="photographie" src={rotor3D} alt="rotor"/>
                             <div className="row area-text">
                                 <button className="btn btn-primary shop-item-button" onClick={this.Plan.bind(this)} type="button">ADD TO ARTICLE</button>
-                                <span>{this.state.elemPlan}€</span>
+                                <span>{this.state.planPrice}€</span>
                             </div>
                             <div className="blablaBulle">Les plans machiavélique haha !!<br/>Plan éolienne  </div>
                         </div>
@@ -64,7 +63,7 @@ class Shop extends Component {
                             <img className="photographie" src={socle3D} alt="socle" />
                             <div className="row area-text">
                                 <button className="btn btn-primary shop-item-button" onClick={this.Lampe.bind(this)} type="button">ADD TO DRESS</button>
-                                <span>{this.state.elemLampe}€</span>
+                                <span>{this.state.lampePrice}€</span>
                             </div>
                             <div className="blablaBulle">lampe qui clignote !<br/>Lampe LED </div>
                         </div>
@@ -72,7 +71,7 @@ class Shop extends Component {
                             <img className="photographie" src={rotor3D} alt="rotor" />
                             <div className="row area-text">
                                 <button className="btn btn-primary shop-item-button" onClick={this.Battrie.bind(this)} type="button">ADD TO ARTICLE</button>
-                                <span>{this.state.elemBattrie}€</span>
+                                <span>{this.state.battriePrice}€</span>
                             </div>
                             <div className="blablaBulle">battrie en fusion<br/>Chargeurs Batterie</div>
                         </div>
@@ -88,5 +87,5 @@ class Shop extends Component {
         )
     }
 }
-    
+
 export default Shop

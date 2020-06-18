@@ -13,10 +13,8 @@ function Board (props) {
             draggableElement.classList.remove("matching_false");
             draggableElement.classList.add("matching_true");
             e.target.style.border = "solid"
-
-            // e.target.style.backgroundColor = draggableElement.style.color = "green"; // This approach works only for inline styles. A more general approach would be the following: 
-            // e.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
         }
+
         else{
             console.log('pas le bonne items')
             const draggableElement = document.getElementById(draggableElementData);
@@ -24,7 +22,6 @@ function Board (props) {
         }
 
         const card = document.getElementById(draggableElementData);
-
         e.target.appendChild(card);
     }
 
