@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import {Nav} from "./Nav";
 import Caisse  from "./Caisse";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
+//img
 import rotor3D from '../img/rotor3D.JPG'
 import socle3D from '../img/socle3D.JPG'
+
+toast.configure();
 
 class Shop extends Component {
     constructor(){
@@ -20,9 +25,15 @@ class Shop extends Component {
         }
     }
     
+    
     // Add article btn
     Plan() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.planPrice, isPlan: true})
+        if (this.state.totalPrice === 19 || 27 || 39 || 31 ) {
+            this.setState({totalPrice: this.state.totalPrice + this.state.planPrice, isPlan: true})
+            toast("Article Ajouté !", { type: "success" });
+          } else {
+            toast("Article déja Ajouté !", { type: "error" });
+          }
     }
     Battrie() {
         this.setState({totalPrice: this.state.totalPrice + this.state.battriePrice, isBattrie: true})
@@ -45,6 +56,7 @@ class Shop extends Component {
     }
 
     render() {
+        console.log("TOTAL PRICE " ,this.state.totalPrice)
         return (
             <div>
                 <Nav />

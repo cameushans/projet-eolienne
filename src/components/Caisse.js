@@ -42,7 +42,8 @@ class Caisse extends Component {
                         </div>
                         : console.log("MARCHE PAS !")
                     }
-                </div>
+                </div> 
+                {console.log('CAISSE ',this.props.details.totalPrice)}
                 <StripeAchat total={this.props.details.totalPrice}/>
             </section>
         )

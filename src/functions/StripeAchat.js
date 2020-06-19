@@ -6,14 +6,13 @@ import "react-toastify/dist/ReactToastify.css";
 
 toast.configure();
 
-function StripeAchat() {
-  const [product] = React.useState({
-    name: "Module",
-    price: 20,
-    // price: this.props.total.totalPrice,
-    description: "Module of wind turbine"
-  });
-
+function StripeAchat(total){
+  // const [product] = React.useState({
+  //   name: "Module",
+  //   // price: 20,
+  //   price: total,
+  //   description: "Module of wind turbine"
+  // });
   // export const [product] = {
   //   articles: {
   //     name: null,
@@ -25,8 +24,11 @@ function StripeAchat() {
   async function handleToken(token, addresses) {
     const response = await axios.post(
       "http://localhost:5035/payment",
-      { token, product }
+      { token, total }
+      
     );
+    console.log("TOKEN ET PRODUCT " ,token, total)
+
     const { status } = response.data;
     console.log("Response:", response.data);
     if (status === "success") {
@@ -36,13 +38,14 @@ function StripeAchat() {
     }
   }
 
+  console.log("PRODUCT PRICE", total)
   return (
     <div className="container">
 
       <StripeCheckout
         stripeKey="pk_test_3KHIoVpjbyTbhi9AHXGR7R4n00s3sUtLTe"
         token={handleToken}
-        amount={product.price * 100}
+        amount={total.total * 100}
         name="Tesla Roadster"
         billingAddress
         shippingAddress
