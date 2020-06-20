@@ -21,6 +21,7 @@ class Caisse extends Component {
                         <div id="plan"  className="articlesPanier">
                             <img src={socle3D} className="articlesPanierImg" alt="socle" />
                             <div>Plan du produit </div>
+                            <span>{this.props.details.planPrice} €</span>
                             <button className="btn btn-danger" onClick={this.props.removePlan}>Remove</button>
                         </div>
                         : console.log("MARCHE PAS !")
@@ -30,6 +31,7 @@ class Caisse extends Component {
                         <div id="lamp"  className="articlesPanier">
                             <img src={rotor3D} className="articlesPanierImg" alt="rotor" />
                             <div>Lampe qui clignote</div>
+                            <span>{this.props.details.lampePrice} €</span>
                             <button className="btn btn-danger" onClick={this.props.removeLampe}>Remove</button>
                         </div>
                         : console.log("MARCHE PAS !")
@@ -38,6 +40,7 @@ class Caisse extends Component {
                         <div id="battrie"  className="articlesPanier">
                             <img src={socle3D} className="articlesPanierImg" alt="socle"/>
                             <div>Battrie qui tourne</div>
+                            <span>{this.props.details.battriePrice} €</span>
                             <button className="btn btn-danger" onClick={this.props.removeBattrie}>Remove</button>
                         </div>
                         : console.log("MARCHE PAS !")

@@ -28,35 +28,55 @@ class Shop extends Component {
     
     // Add article btn
     Plan() {
-        if (this.state.totalPrice === 19 || 27 || 39 || 31 ) {
-            this.setState({totalPrice: this.state.totalPrice + this.state.planPrice, isPlan: true})
-            toast("Article Ajouté !", { type: "success" });
-          } else {
-            toast("Article déja Ajouté !", { type: "error" });
-          }
+        const totalPrice = this.state.totalPrice
+        if (totalPrice === 0 || totalPrice === 8 || totalPrice == 12 || totalPrice === 20) {
+            this.setState({totalPrice: totalPrice + this.state.planPrice, isPlan: true})
+            toast("Article Ajouté ✅", {type: "info"});
+
+        } else {
+        toast("Article déja Ajouté !", { type: "error" });
+        }
     }
     Battrie() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.battriePrice, isBattrie: true})
+        const totalPrice = this.state.totalPrice
+        if (totalPrice === 0 || totalPrice === 8 || totalPrice == 19 || totalPrice === 27) {
+            this.setState({totalPrice: totalPrice + this.state.battriePrice, isBattrie: true})
+            console.log("HELLO",totalPrice)
+            toast("Article Ajouté ✅", {type: "info"});
+
+        } else {
+        toast("Article déja Ajouté !", { type: "error" });
+        }
     }
     Lampe() {
-        this.setState({totalPrice: this.state.totalPrice + this.state.lampePrice, isLampe: true})
+        const totalPrice = this.state.totalPrice
+        if (totalPrice === 0 || totalPrice === 12 || totalPrice == 19 || totalPrice === 31) {
+            this.setState({totalPrice: totalPrice + this.state.lampePrice, isLampe: true})
+            toast("Article Ajouté ✅", {type: "info"});
+        } else {
+        toast("Article déja Ajouté !", { type: "error" });
+        }
     }
 
     // Remove btn
     removePlan() {
-        this.setState({totalPrice: this.state.totalPrice - this.state.planPrice, isPlan: false})
+        const totalPrice = this.state.totalPrice
+        this.setState({totalPrice: totalPrice - this.state.planPrice, isPlan: false})
     }
 
     removeBattrie() {
-        this.setState({totalPrice: this.state.totalPrice - this.state.battriePrice, isBattrie: false})
+        const totalPrice = this.state.totalPrice
+        this.setState({totalPrice: totalPrice - this.state.battriePrice, isBattrie: false})
     }
 
     removeLampe() {
-        this.setState({totalPrice: this.state.totalPrice - this.state.lampePrice, isLampe: false})
+        const totalPrice = this.state.totalPrice
+        this.setState({totalPrice: totalPrice - this.state.lampePrice, isLampe: false})
     }
 
     render() {
-        console.log("TOTAL PRICE " ,this.state.totalPrice)
+        const totalPrice = this.state.totalPrice
+        console.log("TOTAL PRICE " ,totalPrice)
         return (
             <div>
                 <Nav />
