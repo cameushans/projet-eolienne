@@ -29,7 +29,7 @@ class Shop extends Component {
     // Add article btn
     Plan() {
         const totalPrice = this.state.totalPrice
-        if (totalPrice === 0 || totalPrice === 8 || totalPrice == 12 || totalPrice === 20) {
+        if (totalPrice === 0 || totalPrice === 8 || totalPrice === 12 || totalPrice === 20) {
             this.setState({totalPrice: totalPrice + this.state.planPrice, isPlan: true})
             toast("Article Ajouté ✅", {type: "info"});
 
@@ -39,7 +39,7 @@ class Shop extends Component {
     }
     Battrie() {
         const totalPrice = this.state.totalPrice
-        if (totalPrice === 0 || totalPrice === 8 || totalPrice == 19 || totalPrice === 27) {
+        if (totalPrice === 0 || totalPrice === 8 || totalPrice === 19 || totalPrice === 27) {
             this.setState({totalPrice: totalPrice + this.state.battriePrice, isBattrie: true})
             console.log("HELLO",totalPrice)
             toast("Article Ajouté ✅", {type: "info"});
@@ -50,7 +50,7 @@ class Shop extends Component {
     }
     Lampe() {
         const totalPrice = this.state.totalPrice
-        if (totalPrice === 0 || totalPrice === 12 || totalPrice == 19 || totalPrice === 31) {
+        if (totalPrice === 0 || totalPrice === 12 || totalPrice === 19 || totalPrice === 31) {
             this.setState({totalPrice: totalPrice + this.state.lampePrice, isLampe: true})
             toast("Article Ajouté ✅", {type: "info"});
         } else {
@@ -81,12 +81,12 @@ class Shop extends Component {
             <div>
                 <Nav />
                 <main>
-                    <h2 className="margin50" style={{textAlign: 'center'}}>Shop Luxéole</h2>
+                    <h2 className="margin50" style={{textAlign: 'center'}}>Luxéole Shop</h2>
                     <section className="row around wrap">
                         <div className="card2 info wrap">
                             <img className="photographie" src={rotor3D} alt="rotor"/>
                             <div className="row area-text">
-                                <button className="btn btn-primary shop-item-button" onClick={this.Plan.bind(this)} type="button">ADD TO ARTICLE</button>
+                                <button className="btn btn-primary shop-item-button" onClick={this.Plan.bind(this)} type="button">Ajouter</button>
                                 <span>{this.state.planPrice}€</span>
                             </div>
                             <div className="blablaBulle">Les plans machiavélique haha !!<br/>Plan éolienne  </div>
@@ -94,7 +94,7 @@ class Shop extends Component {
                         <div className="card2 info"> 
                             <img className="photographie" src={socle3D} alt="socle" />
                             <div className="row area-text">
-                                <button className="btn btn-primary shop-item-button" onClick={this.Lampe.bind(this)} type="button">ADD TO DRESS</button>
+                                <button className="btn btn-primary shop-item-button" onClick={this.Lampe.bind(this)} type="button">Ajouter</button>
                                 <span>{this.state.lampePrice}€</span>
                             </div>
                             <div className="blablaBulle">lampe qui clignote !<br/>Lampe LED </div>
@@ -102,7 +102,7 @@ class Shop extends Component {
                         <div className="card2 info"> 
                             <img className="photographie" src={rotor3D} alt="rotor" />
                             <div className="row area-text">
-                                <button className="btn btn-primary shop-item-button" onClick={this.Battrie.bind(this)} type="button">ADD TO ARTICLE</button>
+                                <button className="btn btn-primary shop-item-button" onClick={this.Battrie.bind(this)} type="button">Ajouter</button>
                                 <span>{this.state.battriePrice}€</span>
                             </div>
                             <div className="blablaBulle">battrie en fusion<br/>Chargeurs Batterie</div>

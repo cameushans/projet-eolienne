@@ -46,12 +46,13 @@ function StripeAchat(total){
         stripeKey="pk_test_3KHIoVpjbyTbhi9AHXGR7R4n00s3sUtLTe"
         token={handleToken}
         amount={total.total * 100}
-        name="Tesla Roadster"
+        name="Luxeole Articles"
+        currency="EUR"
         billingAddress
         shippingAddress
         className="stripe"
       >
-        <button className="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        <button className="btn btn-primary btn-purchase" type="button">Payer</button>
       </StripeCheckout>
     </div>
   );

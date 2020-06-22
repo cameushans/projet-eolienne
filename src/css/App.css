@@ -55,3 +55,19 @@ body{
 .flex_end{
   justify-content: flex-end;
 }
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#home_nav{
+  position: absolute;
+  left: 20px;
+}
+
+@media screen and (max-width: 640px){
+  #home_nav{
+    position: absolute;
+    left: 0;
+  }
+}
