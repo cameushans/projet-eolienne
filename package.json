@@ -1,7 +1,7 @@
 {
   "name": "web-app",
   "version": "0.1.0",
-  "homepage": "http://luxeole.rayane-dev.com",
+  "homepage": "http://luxeole.rayane-dev.com/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

@@ -23,7 +23,8 @@ function StripeAchat(total){
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
-      "http://localhost:5035/payment",
+      "http://lu-back.rayane-dev.com/payment",
+      // "http://localhost:5035/payment",
       { token, total }
       
     );
@@ -32,7 +33,7 @@ function StripeAchat(total){
     const { status } = response.data;
     console.log("Response:", response.data);
     if (status === "success") {
-      toast("Success! Check email for details", { type: "success" });
+      toast("opération réalisée avec succès !", { type: "success" });
     } else {
       toast("Something went wrong", { type: "error" });
     }
